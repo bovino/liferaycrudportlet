@@ -1,0 +1,4 @@
+liferaycrudportlet
+==================
+
+Liferay CRUD Portlet
