@@ -6,7 +6,7 @@ Sample Portlet application - CRUD Operations.
 To build this sample, i used the following tools:
 
 - Eclipse Helios Java EE IDE
-- Java 6 (JDK 6)
+- Java 1.6.0.32 (JDK 6)
 - Tomcat 7.0.24
 - Liferay 6.2 Community Edition
 - Liferay MVC Framework
