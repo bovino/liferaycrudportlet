@@ -1,5 +1,6 @@
 <%@page import="com.liferay.portal.kernel.servlet.SessionErrors"%>
 <%@page import="com.liferay.portal.kernel.servlet.SessionMessages"%>
+<%@page import="com.liferay.portlet.calendar.model.CalEvent"%>
 <%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 <%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
@@ -12,11 +13,11 @@
 <portlet:actionURL var="addMobilePhoneActionURL" windowState="normal" name="addMobilePhone">
 </portlet:actionURL>
 
-<% if(SessionMessages.contains(renderRequest.getPortletSession(),"mobilephone-add-success")){%>
+<% if(SessionMessages.contains(renderRequest.getPortletSession(),"mobilePhone-add-success")){%>
 <liferay-ui:success key="mobilephone-add-success" message="MobilePhone information have been added successfully." />
 <%} %>
 
-<% if(SessionErrors.contains(renderRequest.getPortletSession(),"mobilephone-add-error")){%>
+<% if(SessionErrors.contains(renderRequest.getPortletSession(),"mobilePhone-add-error")){%>
 <liferay-ui:error key="mobilephone-add-error" message="There is an Error occured while adding mobilephone please try again" />
 <%} %>
 
@@ -32,7 +33,9 @@
 <input type="text" name="<portlet:namespace/>brand" id="<portlet:namespace/>brand"/><br/>
 
 <b>Release Date</b><br/>
-<input type="text" name="<portlet:namespace/>releaseDate" id="<portlet:namespace/>releaseDate"/><br/>
+<liferay-ui:input-field model="<%= CalEvent.class %>"   
+           field="<portlet:namespace/>releaseDate" 
+           id="<portlet:namespace/>releaseDate" /><br/>
 
 <b>Price</b><br/>
 <input type="text" name="<portlet:namespace/>price" id="<portlet:namespace/>price"/><br/>

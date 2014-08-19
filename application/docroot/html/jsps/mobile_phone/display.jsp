@@ -24,7 +24,7 @@
 
 <%
 List<MobilePhone> mobilephoneList=MobilePhoneLocalServiceUtil.getMobilePhones(0,MobilePhoneLocalServiceUtil.getMobilePhonesCount());
-MobilePhone selecteMobilePhoneObject=(MobilePhone)renderRequest.getAttribute("mobilephoneObject");
+MobilePhone selecteMobilePhoneObject=(MobilePhone)renderRequest.getAttribute("mobilePhoneObject");
 %>
 
 <form action="<%=getMobilePhoneActionURL.toString()%>" name="mobilephoneForm"  method="POST">
@@ -43,6 +43,7 @@ MobilePhone selecteMobilePhoneObject=(MobilePhone)renderRequest.getAttribute("mo
 <%if(selecteMobilePhoneObject!=null){%>
 
 	<h3>The following are the selected Mobile Phone Information</h3><br/>
+	ID: <%=selecteMobilePhoneObject.getPrimaryKey() %><br/>
 	Name:<%=selecteMobilePhoneObject.getName() %><br/>
 	Brand:<%=selecteMobilePhoneObject.getBrand() %><br/>
 	Description: <%=selecteMobilePhoneObject.getDescription() %><br/>

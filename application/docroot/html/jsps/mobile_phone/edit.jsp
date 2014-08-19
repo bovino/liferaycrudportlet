@@ -26,17 +26,17 @@
 
 <a href="<%=homeURL.toString() %>">Home</a><br/><br/>
 
-<% if(SessionMessages.contains(renderRequest.getPortletSession(),"mobilephone-update-success")){%>
+<% if(SessionMessages.contains(renderRequest.getPortletSession(),"mobilePhone-update-success")){%>
 <liferay-ui:success key="mobilephone-update-success" message="Selected MobilePhone information have been updated successfully." />
 <%} %>
 
-<% if(SessionErrors.contains(renderRequest.getPortletSession(),"mobilephone-update-error")){%>
+<% if(SessionErrors.contains(renderRequest.getPortletSession(),"mobilePhone-update-error")){%>
 <liferay-ui:error key="mobilephone-update-error" message="There is an Error occured while updating mobilephone please try again" />
 <%} %>
 
 <%
 List<MobilePhone> mobilephoneList=MobilePhoneLocalServiceUtil.getMobilePhones(0,MobilePhoneLocalServiceUtil.getMobilePhonesCount());
-MobilePhone selecteMobilePhoneObject=(MobilePhone)renderRequest.getAttribute("mobilephoneObject");
+MobilePhone selecteMobilePhoneObject=(MobilePhone)renderRequest.getAttribute("mobilePhoneObject");
 %>
 <form action="<%=getMobilePhoneActionURL.toString()%>" name="mobilephoneForm"  method="POST">
 

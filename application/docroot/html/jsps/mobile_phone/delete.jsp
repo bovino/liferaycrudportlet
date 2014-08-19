@@ -22,17 +22,17 @@
 <h2>Delete Mobile Phone</h2>
 <a href="<%=homeURL.toString() %>">Home</a><br/><br/>
 
-<% if(SessionMessages.contains(renderRequest.getPortletSession(),"mobilephone-delete-success")){%>
+<% if(SessionMessages.contains(renderRequest.getPortletSession(),"mobilePhone-delete-success")){%>
 <liferay-ui:success key="mobilephone-delete-success" message="Selected MobilePhone information have been deleted successfully." />
 <%} %>
 
-<% if(SessionErrors.contains(renderRequest.getPortletSession(),"mobilephone-delete-error")){%>
+<% if(SessionErrors.contains(renderRequest.getPortletSession(),"mobilePhone-delete-error")){%>
 <liferay-ui:error key="mobilephone-delete-error" message="There is an Error occured while deleting mobilephone please try again" />
 <%} %>
 
 <%
 List<MobilePhone> mobilephoneList=MobilePhoneLocalServiceUtil.getMobilePhones(0,MobilePhoneLocalServiceUtil.getMobilePhonesCount());
-MobilePhone selecteMobilePhoneObject=(MobilePhone)renderRequest.getAttribute("mobilephoneObject");
+MobilePhone selecteMobilePhoneObject=(MobilePhone)renderRequest.getAttribute("mobilePhoneObject");
 %>
 <form action="<%=getMobilePhoneActionURL.toString()%>" name="mobilephoneForm"  method="POST">
 <b>Select Mobile Phone ID</b><br>
@@ -48,6 +48,7 @@ MobilePhone selecteMobilePhoneObject=(MobilePhone)renderRequest.getAttribute("mo
 
 <%if(selecteMobilePhoneObject!=null){%>
 
+ID: <%=selecteMobilePhoneObject.getPrimaryKey()%><br/>
 Name:<%=selecteMobilePhoneObject.getName()%><br/>
 Brand:<%=selecteMobilePhoneObject.getBrand()%><br/>
 Description: <%=selecteMobilePhoneObject.getDescription() %><br/>
