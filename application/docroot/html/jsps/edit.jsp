@@ -24,7 +24,7 @@
 
 <liferay-ui:header
     backURL="<%= viewMobilePhoneURL %>"
-    title='<%= (mobilePhone != null) ? mobilePhone.getName() : "New mobile phone" %>'
+    title='<%= (mobilePhone != null) ? "Edit mobile phone: " + mobilePhone.getName() : "New mobile phone" %>'
 />
 
 <aui:form action="<%= editMobilePhoneURL %>" method="POST" name="fm">
