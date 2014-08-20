@@ -20,4 +20,7 @@ To build this sample, i used the following tools:
 
 - <b> application:</b> Here is the entire application (i´ve uploaded the entire Eclipse project, except for the ".settings" folder), including source code, ant scripts, database scripts and everything else
 
-- <b> distribution:</b> in this folder you have a .war file of the portlet ready to be deployed in LIferay 6.2. This war file was generated with ant, using the command ant deploy
+- <b> distribution:</b> in this folder you have a .war file of the portlet ready to be deployed in LIferay 6.2. This war file was generated with ant, using the command ant deploy <br/>
+
+![alt tag](doc/images/portlet1.jpg)
+![alt tag](doc/images/portlet2.jpg)
