@@ -2,6 +2,14 @@
 <%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ page import="com.liferay.portal.util.PortalUtil" %>
+<%@ page import="com.meera.dbservice.model.MobilePhone"%>
+<%@ page import="com.meera.dbservice.service.MobilePhoneLocalServiceUtil"%>
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
+
+<%!
+com.liferay.portal.kernel.dao.search.SearchContainer searchContainer = null;
+%>
 
 <portlet:defineObjects />
 
@@ -9,25 +17,46 @@
 
 <h1>Liferay Mobile Phone CRUD Operations</h1>
 
-<portlet:renderURL var="addMobilePhone">
-<portlet:param name="mvcPath" value="/html/jsps/mobile_phone/add.jsp"/>
-</portlet:renderURL>
+<b> Listing Mobile Phones</b><br/>
 
-<portlet:renderURL var="updateMobilePhone">
-<portlet:param name="mvcPath" value="/html/jsps/mobile_phone/edit.jsp"/>
-</portlet:renderURL>
+<liferay-ui:search-container emptyResultsMessage="There are no mobile phones to display">
+    <liferay-ui:search-container-results
+        results="<%= MobilePhoneLocalServiceUtil.getMobilePhones(searchContainer.getStart(), searchContainer.getEnd()) %>"
+        total="<%= MobilePhoneLocalServiceUtil.getMobilePhonesCount() %>"
+    />
 
-<portlet:renderURL var="dislayMobilePhone">
-<portlet:param name="mvcPath" value="/html/jsps/mobile_phone/display.jsp"/>
-</portlet:renderURL>
+    <liferay-ui:search-container-row
+        className="com.meera.dbservice.model.MobilePhone"
+        keyProperty="mobilePhoneId"
+        modelVar="mobilePhone" escapedModel="<%= true %>"
+    >
+        <liferay-ui:search-container-column-text
+            name="name"
+            value="<%= mobilePhone.getName() %>"
+        />
 
-<portlet:renderURL var="deleteMobilePhone">
-<portlet:param name="mvcPath" value="/html/jsps/mobile_phone/delete.jsp"/>
-</portlet:renderURL>
+        <liferay-ui:search-container-column-text
+            name="description"
+            value="<%= mobilePhone.getDescription() %>"
+        />
 
-<br/>
+        <liferay-ui:search-container-column-text
+            name="brand"
+            value="<%= mobilePhone.getBrand() %>"
+        />
 
-<a href="<%=addMobilePhone.toString()%>">Add Mobile Phone</a><br/>
-<a href="<%=updateMobilePhone.toString()%>">Update Mobile Phone</a><br/>
-<a href="<%=deleteMobilePhone.toString()%>">Delete Mobile Phone</a><br/>
-<a href="<%=dislayMobilePhone.toString()%>">Display Mobile Phone Details</a><br/>
+        <liferay-ui:search-container-column-date
+            name="releaseDate"
+            value="<%= mobilePhone.getReleaseDate() %>"
+        />
+        
+        <liferay-ui:search-container-column-jsp
+		    align="right"
+		    path="/html/jsps/mobile_phone_actions.jsp"
+		/>
+
+    </liferay-ui:search-container-row>
+
+    <liferay-ui:search-iterator />
+    
+</liferay-ui:search-container>
