@@ -12,12 +12,23 @@ com.liferay.portal.kernel.dao.search.SearchContainer searchContainer = null;
 %>
 
 <portlet:defineObjects />
-
 <liferay-theme:defineObjects />
 
 <h1>Liferay Mobile Phone CRUD Operations</h1>
-
 <b> Listing Mobile Phones</b><br/>
+
+<% String redirect = PortalUtil.getCurrentURL(renderRequest); %>
+
+<aui:button-row>
+
+    <portlet:renderURL var="addMobilePhoneURL">
+        <portlet:param name="mvcPath" value="/html/jsps/mobile_phone/edit.jsp" />
+        <portlet:param name="redirect" value="<%= redirect %>" />
+    </portlet:renderURL>
+
+    <aui:button onClick="<%= addMobilePhoneURL.toString() %>" value="add-location" />
+
+</aui:button-row>
 
 <liferay-ui:search-container emptyResultsMessage="There are no mobile phones to display">
     <liferay-ui:search-container-results
