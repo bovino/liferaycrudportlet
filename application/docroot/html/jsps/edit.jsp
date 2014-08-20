@@ -3,9 +3,17 @@
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
 <%@ page import="com.meera.dbservice.model.MobilePhone"%>
+<%@ page import="java.util.ResourceBundle" %>
+<%@ page import="java.util.Locale" %>
 <%@ page import="com.meera.dbservice.service.MobilePhoneLocalServiceUtil"%>
 
 <%
+	
+	ResourceBundle rb = ResourceBundle.getBundle("content.Language",Locale.getDefault());
+	String newPhoneText = rb.getString("new-mobile-phone");
+	String editPhoneText = rb.getString("edit-title");
+	String releaseDateText = rb.getString("release-date");
+	
 	MobilePhone mobilePhone = null;
     long mobilePhoneId = ParamUtil.getLong(request, "mobilePhoneId");
 
@@ -24,7 +32,7 @@
 
 <liferay-ui:header
     backURL="<%= viewMobilePhoneURL %>"
-    title='<%= (mobilePhone != null) ? "Edit mobile phone: " + mobilePhone.getName() : "New mobile phone" %>'
+    title='<%= (mobilePhone != null) ? editPhoneText + mobilePhone.getName() : newPhoneText %>'
 />
 
 <aui:form action="<%= editMobilePhoneURL %>" method="POST" name="fm">
@@ -36,7 +44,7 @@
         <aui:input name="name" />
         <aui:input name="description" />
         <aui:input name="brand" />
-        <aui:input name="releaseDate" />
+        <aui:input name="releaseDate" label="<%= releaseDateText %>" />
         <aui:input name="price" />
 
     </aui:fieldset>
