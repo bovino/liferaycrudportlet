@@ -8,7 +8,7 @@
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 
 <%!
-com.liferay.portal.kernel.dao.search.SearchContainer searchContainer = null;
+com.liferay.portal.kernel.dao.search.SearchContainer<MobilePhone> searchContainer = null;
 %>
 
 <portlet:defineObjects />
@@ -22,11 +22,11 @@ com.liferay.portal.kernel.dao.search.SearchContainer searchContainer = null;
 <aui:button-row>
 
     <portlet:renderURL var="addMobilePhoneURL">
-        <portlet:param name="mvcPath" value="/html/jsps/mobile_phone/edit.jsp" />
+        <portlet:param name="mvcPath" value="/html/jsps/edit.jsp" />
         <portlet:param name="redirect" value="<%= redirect %>" />
     </portlet:renderURL>
 
-    <aui:button onClick="<%= addMobilePhoneURL.toString() %>" value="add-location" />
+    <aui:button onClick="<%= addMobilePhoneURL.toString() %>" value="Add new mobile phone" />
 
 </aui:button-row>
 

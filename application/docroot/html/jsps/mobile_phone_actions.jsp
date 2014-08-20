@@ -18,7 +18,7 @@
 <liferay-ui:icon-menu>
     
     <portlet:renderURL var="editURL">
-        <portlet:param name="mvcPath" value="/html/jsps/mobile_phone/edit.jsp" />
+        <portlet:param name="mvcPath" value="/html/jsps/edit.jsp" />
         <portlet:param name="mobilePhoneId" value="<%= String.valueOf(mobilePhoneId) %>" />
         <portlet:param name="redirect" value="<%= redirect %>" />
     </portlet:renderURL>
