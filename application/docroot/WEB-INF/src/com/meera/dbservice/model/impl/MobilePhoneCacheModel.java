@@ -30,7 +30,7 @@ import java.util.Date;
 /**
  * The cache model class for representing MobilePhone in entity cache.
  *
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @see MobilePhone
  * @generated
  */

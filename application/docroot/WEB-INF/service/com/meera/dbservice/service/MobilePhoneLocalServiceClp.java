@@ -17,7 +17,7 @@ package com.meera.dbservice.service;
 import com.liferay.portal.service.InvokableLocalService;
 
 /**
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @generated
  */
 public class MobilePhoneLocalServiceClp implements MobilePhoneLocalService {

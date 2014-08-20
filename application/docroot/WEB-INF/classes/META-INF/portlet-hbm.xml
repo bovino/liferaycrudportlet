@@ -3,7 +3,7 @@
 
 <hibernate-mapping default-lazy="false" auto-import="false">
 	<import class="com.meera.dbservice.model.MobilePhone" />
-	<class name="com.meera.dbservice.model.impl.MobilePhoneImpl" table="LS_MobilePhone">
+	<class name="com.meera.dbservice.model.impl.MobilePhoneImpl" table="MB_MobilePhone">
 		<cache usage="read-write" />
 		<id name="mobilePhoneId" type="long">
 			<generator class="assigned" />

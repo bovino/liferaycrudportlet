@@ -19,7 +19,7 @@ import com.meera.dbservice.service.MobilePhoneLocalServiceUtil;
 import java.util.Arrays;
 
 /**
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @generated
  */
 public class MobilePhoneLocalServiceClpInvoker {

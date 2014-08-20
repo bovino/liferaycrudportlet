@@ -26,7 +26,7 @@ import java.util.Map;
  * This class is a wrapper for {@link MobilePhone}.
  * </p>
  *
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @see MobilePhone
  * @generated
  */

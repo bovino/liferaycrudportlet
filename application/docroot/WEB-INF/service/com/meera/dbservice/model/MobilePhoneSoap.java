@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * This class is used by SOAP remote services.
  *
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @generated
  */
 public class MobilePhoneSoap implements Serializable {

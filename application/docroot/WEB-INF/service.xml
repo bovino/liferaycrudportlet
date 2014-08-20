@@ -2,8 +2,8 @@
 <!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" 
 "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
 <service-builder package-path="com.meera.dbservice">
-	<author>LiferaySavvy</author>
-	<namespace>LS</namespace>
+	<author>MarceloBezerra</author>
+	<namespace>MB</namespace>
 
 	<!-- Mobile Phone -->
 	<entity name="MobilePhone" local-service="true" remote-service="false">

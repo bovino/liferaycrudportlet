@@ -21,7 +21,7 @@ import com.meera.dbservice.model.MobilePhone;
 import com.meera.dbservice.service.MobilePhoneLocalServiceUtil;
 
 /**
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @generated
  */
 public abstract class MobilePhoneActionableDynamicQuery

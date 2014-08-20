@@ -29,7 +29,7 @@ import com.liferay.portal.service.PersistedModelLocalService;
  * credentials because this service can only be accessed from within the same
  * VM.
  *
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @see MobilePhoneLocalServiceUtil
  * @see com.meera.dbservice.service.base.MobilePhoneLocalServiceBaseImpl
  * @see com.meera.dbservice.service.impl.MobilePhoneLocalServiceImpl

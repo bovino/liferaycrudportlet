@@ -17,9 +17,9 @@ package com.meera.dbservice.model;
 import com.liferay.portal.model.PersistedModel;
 
 /**
- * The extended model interface for the MobilePhone service. Represents a row in the &quot;LS_MobilePhone&quot; database table, with each column mapped to a property of this class.
+ * The extended model interface for the MobilePhone service. Represents a row in the &quot;MB_MobilePhone&quot; database table, with each column mapped to a property of this class.
  *
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @see MobilePhoneModel
  * @see com.meera.dbservice.model.impl.MobilePhoneImpl
  * @see com.meera.dbservice.model.impl.MobilePhoneModelImpl

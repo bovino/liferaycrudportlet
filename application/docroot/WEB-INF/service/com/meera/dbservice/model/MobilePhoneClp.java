@@ -33,7 +33,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author LiferaySavvy
+ * @author MarceloBezerra
  */
 public class MobilePhoneClp extends BaseModelImpl<MobilePhone>
 	implements MobilePhone {

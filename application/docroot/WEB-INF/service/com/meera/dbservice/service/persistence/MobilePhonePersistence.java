@@ -25,7 +25,7 @@ import com.meera.dbservice.model.MobilePhone;
  * Caching information and settings can be found in <code>portal.properties</code>
  * </p>
  *
- * @author LiferaySavvy
+ * @author MarceloBezerra
  * @see MobilePhonePersistenceImpl
  * @see MobilePhoneUtil
  * @generated

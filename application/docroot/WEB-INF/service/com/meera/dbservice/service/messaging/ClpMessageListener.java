@@ -21,7 +21,7 @@ import com.meera.dbservice.service.ClpSerializer;
 import com.meera.dbservice.service.MobilePhoneLocalServiceUtil;
 
 /**
- * @author LiferaySavvy
+ * @author MarceloBezerra
  */
 public class ClpMessageListener extends BaseMessageListener {
 	public static String getServletContextName() {

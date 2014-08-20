@@ -23,7 +23,7 @@
 		</attributes>
 	</mapped-superclass>
 	<entity class="com.meera.dbservice.model.impl.MobilePhoneImpl" name="MobilePhone">
-		<table name="LS_MobilePhone" />
+		<table name="MB_MobilePhone" />
 		<attributes />
 	</entity>
 </entity-mappings>
